@@ -1,0 +1,17 @@
+#water {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50%;
+	background: linear-gradient(#fe9f8f, #8a65ca);
+}
+
+#sky {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 50%;
+	background: radial-gradient(circle, #fd5e22, #bf8fc4);
+}
