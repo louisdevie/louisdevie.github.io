@@ -2,5 +2,25 @@
 <html><head>
   <title>Louis DEVIE</title>
 </head><body>
-  <h1>Hello, World</h1>
+  <script>
+		var user_languages, french;
+    
+		user_languages = navigator.languages;
+		if (user_languages === undefined) {
+			user_languages = [navigator.language];
+		}
+    
+    french = false;
+		for (const user of user_languages) {
+			if (user.toLowerCase().startsWith('fr')) {
+				french = true;
+			}
+		}
+    
+    if (french) {
+      window.location.href = 'fr';
+    } else {
+      window.location.href = 'en';
+    }
+  </script>
 </body></html>
