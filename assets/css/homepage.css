@@ -1,11 +1,26 @@
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 .background {
-	height: 100vh;
-	background-image: linear-gradient(#be91c6, #fea798, #be91c6);
+	height: 200vh;
+	background-image: linear-gradient(#fff, #4ad);
 	overflow: hidden;
+	transition: transform 1s ease-out;
+	transform: translateY(-50%);
+}
+
+.background.shown {
+	transform: translateY(-50%);
+}
+
+.setting {
+	position: relative;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 50%;
 }
 
 .buildings {
@@ -18,4 +33,26 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.windturbine {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	background-image: url('../images/homepage-wind-turbine-blades.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: rotate 16s linear infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
