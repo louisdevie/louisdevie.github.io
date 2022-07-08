@@ -1,0 +1,45 @@
+body {
+	margin: auto;
+	width: 80%;
+	max-width: 800px;
+	min-height: 100vh;
+
+	font-family: "Fira Sans", sans-serif;
+
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+	text-align: center;
+	padding-top: 30vh;
+
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+footer {
+	text-align: center;
+}
+
+pre {
+	font-size: 10pt;
+}
+
+a {
+	color: steelblue;
+	text-decoration: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	padding-left: 3ch;
+}
+
+ul > li::marker {
+	content: "→ ";
+}

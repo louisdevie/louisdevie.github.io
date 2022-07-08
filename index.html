@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html><head>
-  <title>Louis DEVIE</title>
-</head><body>
-  <script>
-		var user_languages, french;
-    
-		user_languages = navigator.languages;
-		if (user_languages === undefined) {
-			user_languages = [navigator.language];
-		}
-    
-    french = false;
-		for (const user of user_languages) {
-			if (user.toLowerCase().startsWith('fr')) {
-				french = true;
-			}
-		}
-    
-    if (french) {
-      window.location.href = 'fr';
-    } else {
-      window.location.href = 'en';
-    }
-  </script>
+	<title>Louis DEVIE</title>
+	<script type="text/javascript" src="assets/scripts/elizalina.js"></script>
+	<script type="text/javascript" src="assets/scripts/homepage.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/style/homepage.css"/>
+</head>
+<body>
+  <main>
+    <div id="text">
+      <h1 class="elz _in_construction_title"></h1>
+      <span class="elz _in_construction_message"></span>
+    </div>
+    <img id="image" alt="illustration" src="assets/images/illustration.jpeg"/>
+  </main>
+  <footer>
+    <span class="elz _copyright"></span>
+    <a href="links.html" class="elz _links">test</a>
+  </footer>
 </body></html>
