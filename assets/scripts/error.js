@@ -1,5 +1,5 @@
 window.onload = async function () {
-	await elizalina.loadLanguage("assets/localisation/error_en.json", ["en-GB", "en"]);
-	await elizalina.loadLanguage("assets/localisation/error_fr.json", ["FR-fr", "fr"]);
+	elizalina.addLanguage("assets/localisation/error_en.json", ["en-GB", "en"]);
+	elizalina.addLanguage("assets/localisation/error_fr.json", ["fr-FR", "fr"]);
 	elizalina.fillDocument();
 }

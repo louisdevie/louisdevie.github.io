@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+}
+
+#section-1 {
+	position: relative;
+	height: calc(100vh - 80px);
+	background-color: rgb(169, 223, 239);
+	background-image: linear-gradient(rgb(122, 167, 203) 0%, rgb(169, 223, 239) 50%);
+}
+
+#section-1 .railing {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10vh;
+	background-image: url("../images/railing.png");
+	background-size: contain;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+#section-1 .tree {
+	position: absolute;
+	bottom: 0;
+	height: 45vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#section-1 .tree.left {
+	left: 0;
+	width: 73%;
+	background-image: url("../images/left-tree.png");
+	background-position: left bottom;
+}
+
+#section-2 {
+	height: 200vh;
+}
