@@ -1,12 +1,32 @@
 body {
 	margin: 0;
+	font-family: "Fira Sans", sans-serif;
 }
+
+h1 {
+	padding-left: 10%;
+	font-family: "Fira Mono", monospace;
+	font-size: 10vh;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*============================================================================*/
 
 #section-1 {
 	position: relative;
 	height: calc(100vh - 80px);
 	background-color: rgb(169, 223, 239);
 	background-image: linear-gradient(rgb(122, 167, 203) 0%, rgb(169, 223, 239) 50%);
+
+	overflow: hidden;
 }
 
 #section-1 .railing {
@@ -14,7 +34,7 @@ body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 10vh;
+	height: 14vh;
 	background-image: url("../images/railing.png");
 	background-size: contain;
 	background-repeat: repeat-x;
@@ -24,18 +44,51 @@ body {
 #section-1 .tree {
 	position: absolute;
 	bottom: 0;
-	height: 45vh;
-	background-size: contain;
+	height: 63vh;
 	background-repeat: no-repeat;
 }
 
 #section-1 .tree.left {
 	left: 0;
 	width: 73%;
-	background-image: url("../images/left-tree.png");
+	background-size: contain;
+	background-image: url("../images/tree-left.png");
 	background-position: left bottom;
 }
 
+#section-1 .tree.right {
+	left: 80vh;
+	width: max(calc(100vw - 80vh), 50vh);
+	background-size: auto 100%;
+	background-image: url("../images/tree-right.png");
+	background-position: right bottom;
+}
+
+#section-1 .buildings.front {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 65vh;
+	background-image: url("../images/buildings-front.png");	
+	background-size: contain;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+/*============================================================================*/
+
 #section-2 {
-	height: 200vh;
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #282e33;
+	color: white;
+	font-size: 14pt;
+}
+
+#section-2 .menu {
+	display: none;
 }
