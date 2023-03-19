@@ -4,7 +4,7 @@ body {
 	max-width: 800px;
 	min-height: 100vh;
 
-	font-family: "Fira Sans", sans-serif;
+	font-family: "Fira Sans", "Calibri", sans-serif;
 
 	display: flex;
 	flex-direction: column;
