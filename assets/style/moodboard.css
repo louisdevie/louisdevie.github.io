@@ -1,0 +1,147 @@
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: "Fira Sans", "Calibri", sans-serif;
+	background-color: #eef;
+	font-size: 12pt;
+}
+
+h1 {
+	font-size: 24pt;
+	margin: 0 0 10pt 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	font-size: 18pt;
+	margin: 0 0 6pt 0;
+	font-weight: bold;
+}
+
+a:has(.icon) {
+    text-decoration: none;
+}
+
+em {
+	font-weight: bold;
+	color: #224;
+	font-style: normal;
+}
+
+p {
+	margin: 4pt 0;
+}
+
+.card {
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: grey 0px 0px 5px;
+	width: -moz-fit-content;
+	width: fit-content;
+	background-color: white;
+	max-width: 350px;
+	position: absolute;
+	transition: opacity 0.5s;
+	opacity: 0;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+}
+
+.emoji {
+	width: 12pt;
+	height: 12pt;
+}
+
+.podium {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: stretch;
+	text-align: center;
+}
+
+.podium-stand {
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+	justify-content: flex-end;
+}
+
+.podium-text {
+	font-size: 11pt;
+	margin-bottom: 4pt;
+}
+
+.podium-1st {
+	background-color: #222;
+	color: #eef;
+	height: 70px;
+}
+
+.podium-2nd {
+	background-color: #222;
+	color: #eef;
+	height: 45px;
+}
+
+.podium-3rd {
+	background-color: #222;
+	color: #eef;
+	height: 30px;
+}
+
+.vt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hz {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.l, .b {
+	align-items: flex-end;
+}
+
+.r, .t {
+	align-items: flex-start;
+}
+
+#card-name {
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+}
+
+#card-projects {
+	right: 50%;
+	bottom: 55%;
+}
+
+#card-location {
+	left: 50%;
+	bottom: 55%;
+}
+
+#card-podium {
+	right: 50%;
+	top: 45%;
+}
+
+#card-skills {
+	left: 50%;
+	top: 45%;
+}
+
+#card-social {
+	right: 50%;
+	top: 45%;
+}
