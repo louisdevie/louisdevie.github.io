@@ -3,7 +3,7 @@ body {
 	padding: 6vh;
 	height: 88vh;
 
-	font-family: "Fira Sans", sans-serif;
+	font-family: "Fira Sans", "Calibri", sans-serif;
 
 	display: flex;
 	flex-direction: column;
