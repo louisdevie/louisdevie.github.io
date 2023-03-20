@@ -20,7 +20,7 @@ h2 {
 	font-weight: bold;
 }
 
-a:has(.icon) {
+a {
     text-decoration: none;
 }
 
@@ -68,31 +68,34 @@ p {
 .podium-stand {
 	display: flex;
 	flex-direction: column;
-	width: 100px;
+	width: 110px;
 	justify-content: flex-end;
 }
 
 .podium-text {
 	font-size: 11pt;
-	margin-bottom: 4pt;
+	margin-bottom: 6pt;
 }
 
 .podium-1st {
 	background-color: #222;
 	color: #eef;
 	height: 70px;
+	padding: 5px;
 }
 
 .podium-2nd {
 	background-color: #222;
 	color: #eef;
 	height: 45px;
+	padding: 5px;
 }
 
 .podium-3rd {
 	background-color: #222;
 	color: #eef;
 	height: 30px;
+	padding: 5px;
 }
 
 .vt {
@@ -143,5 +146,10 @@ p {
 
 #card-social {
 	right: 50%;
+	top: 45%;
+}
+
+#card-resume {
+	left: 50%;
 	top: 45%;
 }

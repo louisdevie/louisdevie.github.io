@@ -5,6 +5,7 @@ window.onload = () => {
 	let location = document.getElementById("card-location");
 	let skills = document.getElementById("card-skills");
 	let social = document.getElementById("card-social");
+	let resume = document.getElementById("card-resume");
 
 	name.style.opacity = "1"; 
 
@@ -27,4 +28,8 @@ window.onload = () => {
 	social.style.marginRight = (podium.clientWidth - name.clientWidth / 2 + 20) + "px";
 	social.style.marginTop = (name.clientHeight / 2 + 20) + "px";
 	social.style.opacity = "1";
+
+	resume.style.marginLeft = (name.clientWidth / 2 + 20) + "px";
+	resume.style.marginTop = (skills.clientHeight - name.clientHeight / 2 + 20) + "px";
+	resume.style.opacity = "1";
 };
