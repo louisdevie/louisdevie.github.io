@@ -10,15 +10,16 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const target = urlParams.get('target');
+    var url;
     switch (target)
     {
       case 'iad-rapport-centrale-inertielle':
-        var url = 'https://drive.google.com/file/d/1DKN3W6GMd-sILa59sLkWkQSa4rkfegol/view?usp=drive_link';
+        url = 'https://drive.google.com/file/d/1DKN3W6GMd-sILa59sLkWkQSa4rkfegol/view?usp=drive_link';
         break;
       default:
         document.getElementsByTagName('h1').innerText = 'La ressource demandée est introuvable';
     };
-    var timer = setTimeout(function() { window.location= }, 1000);
+    var timer = setTimeout(function() { window.location=url; }, 1000);
    </script>
 </body>
 </html>
