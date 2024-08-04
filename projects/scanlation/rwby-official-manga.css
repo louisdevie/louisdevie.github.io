@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: url("background.svg");
+    background-size: 30cm;
+
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16pt;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.block {
+    width: 50%;
+    max-width: 800px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1, .sous-titre, p.paragraph-center, footer {
+  text-align: center;
+}
+
+.book-cover-container {
+    background-color: #db0038;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: calc(100vh - 80px);
+    width: calc((100vh - 80px)*0.69);
+    box-shadow: 4px 4px 10px #555;
+}
+
+img.book-cover {
+    height: 100%;
+    z-index: 1;
+}
+
+.shiny {
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 10vh);
+  left: calc(var(--x, 0) * 1px - 10vh);
+  width: 20vh;
+  height: 20vh;
+  background: radial-gradient(white 0%, #db0038 80%);
+
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.5;
+}
+
+a, a:visited {
+    color: #b51a1a;
+}
+
+.block-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.block-book {
+    overflow: hidden;
+}
+
+footer {
+    margin-top: 10vh;
+}
+
+span.default-sans-serif-font {
+    font-family: sans-serif;
+}
+
+.btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 14pt;
+    font-family: inherit;
+    font-optical-sizing: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+.btn-solid {
+    background-color: black;
+    color: white;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.btn-solid:hover {
+    background-color: #444;
+}
+
+.reader {
+    z-index: 200;
+    position: absolute;
+    background: #000d;
+    display: none;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.reader-next, .reader-prev {
+    z-index: 300;
+}
+
+.reader.open {
+    display: flex;
+}
+
+.reader-pages-container {
+    width: 62vh;
+    position: relative;
+    height: 90vh;
+}
+
+.reader-pages-layout {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10vh;
+    left: calc(var(--reader-pos) * -1px);
+    transition: left 0.4s;
+    position: absolute;
+    top: 0;
+}
+
+img.book-page {
+    height: 90vh;
+    display: block;
+}
+
+.btn.btn-icon {
+    background-color: #000d;
+    padding: 10px;
+}
+
+.btn.btn-icon svg {
+    height: 60px;
+    width: 60px;
+    display: block;
+}
+
+.reader-prev {
+    margin-left: 12vh;
+}
+
+.reader-next {
+    margin-right: 12vh;
+}
+
+.reader-prev.hidden, .reader-next.hidden {
+    visibility: hidden;
+}
+
+.reader-close {
+  position: absolute;
+  top: 3vh;
+  right: 3vh;
+}
+
+.copy-vertical-fix {
+  position: relative;
+  bottom: -0.2em;
+}
+
+.vt-only {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        background-size: 20cm;
+        font-size: 14pt;
+        flex-direction: column;
+        background-attachment: fixed;
+    }
+
+    .block {
+        width: 100%;
+        max-width: unset;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-family: "Petrona", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 32pt;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .book-cover-container {
+        height: calc((100vw - 20px) * 1.44);
+        width: calc(100vw - 20px);
+    }
+
+    .block-info {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .block-book {
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        margin-top: 10vw;
+    }
+
+    .shiny::after {
+      top: calc(38% - 15vw);
+      left: calc(var(--s, 0) * 50% + 25% - 15vw);
+      width: 30vw;
+      height: 30vw;
+      opacity: 0.5;
+    }
+
+    .reader {
+        height: 100vh;
+        height: 100lvh;
+        width: 100vw;
+        top: 0;
+        position: fixed;
+    }
+
+    .reader-pages-container {
+        width: 90vw;
+        position: relative;
+        height: 132vw;
+    }
+
+    img.book-page {
+        height: unset;
+        width: 90vw;
+        display: block;
+    }
+
+    .btn.btn-icon {
+        padding: 5px;
+    }
+
+    .btn.btn-icon svg {
+        height: 40px;
+        width: 40px;
+        display: block;
+    }
+
+    .reader-prev {
+        margin-left: 0;
+        right: 5px;
+    }
+
+    .reader-next {
+        margin-right: 0;
+        left: 5px;
+    }
+
+    .reader-prev, .reader-next {
+        position: absolute;
+    }
+
+    .reader-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+
+    .vt-only {
+        display: initial;
+    }
+
+    .hz-only {
+        display: none;
+    }
+}
